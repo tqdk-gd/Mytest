@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>安全扫描报告 - {{ target }}</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+        }
+        body { font-family: Segoe UI, sans-serif; margin: 40px; }
+        .card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .directory-tree ul { padding-left: 25px; list-style: none; }
+        .directory-tree li { position: relative; padding: 5px 0; }
+        .directory-tree li::before {
+            content: '📄';
+            position: absolute;
+            left: -25px;
+        }
+        .directory-tree li[data-folder]::before { content: '📁'; }
+        table { width: 100%; border-collapse: collapse; }
+        th, td { padding: 12px; text-align: left; border-bottom: 1px solid #ddd; }
+        tr:nth-child(even) { background-color: #f9f9f9; }
+        .severity-critical { color: #e74c3c; font-weight: bold; }
+        .severity-high { color: #e67e22; }
+        .severity-medium { color: #f1c40f; }
+        .severity-low { color: #2ecc71; }
+    </style>
+</head>
+<body>
+    <h1 style="color: var(--primary-color);">Web安全扫描报告</h1>
+    <h2 style="color: var(--secondary-color);">目标网站: {{ target }}</h2>
+
+    <div class="card">
+        <h3>📂 目录结构分析</h3>
+        <div class="directory-tree">
+            {% macro render_tree(node) %}
+                <ul>
+                {% for key, value in node.items() %}
+                    <li {% if value %}data-folder{% endif %}>
+                        {{ key }}
+                        {{ render_tree(value) if value }}
+                    </li>
+                {% endfor %}
+                </ul>
+            {% endmacro %}
+            {{ render_tree(directory_tree) }}
+        </div>
+    </div>
+
+    <div class="card">
+        <h3>📊 资产统计</h3>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+            <div>
+                <canvas id="subdomainChart"></canvas>
+                <p>发现有效子域名: {{ assets.subdomain_count }}</p>
+            </div>
+            <div>
+                <canvas id="filetypeChart"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h3>🚨 漏洞总览</h3>
+        <div style="height: 400px;">
+            <canvas id="vulnerabilityChart"></canvas>
+        </div>
+    </div>
+
+    <div class="card">
+        <h3>📝 漏洞详情</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>严重等级</th>
+                    <th>漏洞名称</th>
+                    <th>URL地址</th>
+                    <th>描述</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for severity in ['critical', 'high', 'medium', 'low'] %}
+                    {% for vuln in vulnerabilities[severity] %}
+                    <tr>
+                        <td class="severity-{{ severity }}">{{ vuln.severity | upper }}</td>
+                        <td>{{ vuln.name }}</td>
+                        <td><a href="{{ vuln.url }}" target="_blank">{{ vuln.url }}</a></td>
+                        <td>{{ vuln.description[:60] }}...</td>
+                    </tr>
+                    {% endfor %}
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+<script>
+// 子域名统计图表
+new Chart(document.getElementById('subdomainChart'), {
+    type: 'doughnut',
+    data: {
+        labels: ['存活子域名', '总数'],
+        datasets: [{
+            data: [{{ assets.subdomain_count }}, {{ assets.urls | length }}],
+            backgroundColor: ['#3498db', '#2ecc71']
+        }]
+    }
+});
+
+// 文件类型图表
+new Chart(document.getElementById('filetypeChart'), {
+    type: 'bar',
+    data: {
+        labels: {{ assets.file_types.keys() | list | tojson }},
+        datasets: [{
+            label: '文件类型分布',
+            data: {{ assets.file_types.values() | list | tojson }},
+            backgroundColor: '#e67e22'
+        }]
+    }
+});
+
+// 漏洞图表
+new Chart(document.getElementById('vulnerabilityChart'), {
+    type: 'radar',
+    data: {
+        labels: ['Critical', 'High', 'Medium', 'Low'],
+        datasets: [{
+            label: '漏洞严重程度分布',
+            data: [
+                {{ vulnerabilities.critical | count }},
+                {{ vulnerabilities.high | count }},
+                {{ vulnerabilities.medium | count }},
+                {{ vulnerabilities.low | count }}
+            ],
+            backgroundColor: 'rgba(231, 76, 60, 0.2)',
+            borderColor: '#e74c3c'
+        }]
+    },
+    options: { 
+        scales: { r: { beginAtZero: true, max: {{ vulnerabilities.values() | map('length') | max }} } }
+    }
+});
+</script>
+</body>
+</html>
