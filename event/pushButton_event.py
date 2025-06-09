@@ -24,7 +24,7 @@ class Worker(QObject):
             url = self.lineEdit_3.text()
             
             if not url:
-                # 发射信号，在主线程显示警告框
+                
                 self.show_warning_signal.emit("错误", "URL 不能为空，请输入有效的 URL。")
                 self.error_signal.emit("URL 不能为空")
                 return
