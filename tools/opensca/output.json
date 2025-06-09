@@ -1,0 +1,12 @@
+{
+  "task_info": {
+    "tool_version": "v3.0.6",
+    "app_name": "opensca",
+    "size": 0,
+    "start_time": "2025-03-07 10:40:27",
+    "end_time": "2025-03-07 10:40:27",
+    "cost_time": 0.0010075,
+    "error": "Stat : The system cannot find the path specified.\nnot config vuln database origin"
+  },
+  "id": "57059417373999104"
+}

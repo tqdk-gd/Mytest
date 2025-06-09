@@ -1,0 +1,68 @@
+
+主机名:           LAPTOP-SKPGIGQJ
+OS 名称:          Microsoft Windows 11 家庭中文版
+OS 版本:          10.0.22631 暂缺 Build 22631
+OS 制造商:        Microsoft Corporation
+OS 配置:          独立工作站
+OS 构建类型:      Multiprocessor Free
+注册的所有人:     地
+注册的组织:       暂缺
+产品 ID:          00342-36205-72868-AAOEM
+初始安装日期:     2022/12/31, 23:17:14
+系统启动时间:     2024/10/28, 07:49:17
+系统制造商:       LENOVO
+系统型号:         82JW
+系统类型:         x64-based PC
+处理器:           安装了 1 个处理器。
+                  [01]: AMD64 Family 25 Model 80 Stepping 0 AuthenticAMD ~3301 Mhz
+BIOS 版本:        LENOVO HHCN11WW, 2021/5/13
+Windows 目录:     C:\WINDOWS
+系统目录:         C:\WINDOWS\system32
+启动设备:         \Device\HarddiskVolume1
+系统区域设置:     zh-cn;中文(中国)
+输入法区域设置:   zh-cn;中文(中国)
+时区:             (UTC+08:00) 北京，重庆，香港特别行政区，乌鲁木齐
+物理内存总量:     14,188 MB
+可用的物理内存:   1,436 MB
+虚拟内存: 最大值: 41,836 MB
+虚拟内存: 可用:   15,616 MB
+虚拟内存: 使用中: 26,220 MB
+页面文件位置:     D:\pagefile.sys
+域:               WORKGROUP
+登录服务器:       \\LAPTOP-SKPGIGQJ
+修补程序:         安装了 6 个修补程序。
+                  [01]: KB5044033
+                  [02]: KB5012170
+                  [03]: KB5027397
+                  [04]: KB5044285
+                  [05]: KB5043937
+                  [06]: KB5046247
+网卡:             安装了 5 个 NIC。
+                  [01]: Realtek PCIe GbE Family Controller
+                      连接名:      以太网
+                      启用 DHCP:   是
+                      DHCP 服务器: 10.0.172.129
+                      IP 地址
+                        [01]: 10.0.172.164
+                  [02]: Realtek RTL8852AE WiFi 6 802.11ax PCIe Adapter
+                      连接名:      WLAN
+                      状态:        媒体连接已中断
+                  [03]: VirtualBox Host-Only Ethernet Adapter
+                      连接名:      以太网 2
+                      启用 DHCP:   否
+                      IP 地址
+                        [01]: 192.168.56.1
+                  [04]: VMware Virtual Ethernet Adapter for VMnet1
+                      连接名:      VMware Network Adapter VMnet1
+                      启用 DHCP:   否
+                      IP 地址
+                        [01]: 192.168.126.1
+                  [05]: VMware Virtual Ethernet Adapter for VMnet8
+                      连接名:      VMware Network Adapter VMnet8
+                      启用 DHCP:   否
+                      IP 地址
+                        [01]: 192.168.47.1
+Hyper-V 要求:     虚拟机监视器模式扩展: 是
+                  固件中已启用虚拟化: 是
+                  二级地址转换: 是
+                  数据执行保护可用: 是

@@ -1,0 +1,593 @@
+<html>
+<head>
+<title>代码审计报告</title>
+
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 20px;
+                background-color: #f4f4f9;
+            }
+            h1 {
+                color: #333;
+                text-align: center;
+                margin-bottom: 30px;
+            }
+            h2 {
+                color: #1976d2;
+                border-bottom: 2px solid #1976d2;
+                padding-bottom: 5px;
+                margin-top: 40px;
+            }
+            .vulnerability {
+                background-color: #fff;
+                padding: 20px;
+                margin-bottom: 20px;
+                border-radius: 5px;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                transition: transform 0.2s ease;
+            }
+            .vulnerability:hover {
+                transform: translateY(-3px);
+            }
+            p {
+                margin: 10px 0;
+            }
+            strong {
+                color: #333;
+            }
+            hr {
+                border: 0;
+                border-top: 1px solid #ddd;
+                margin: 20px 0;
+            }
+        </style>
+        </head>
+<body>
+<h1>代码审计报告</h1>
+<h2>审计目录: E:/python/bishe/pikachu-master/vul/burteforce</h2>
+<div class='vulnerability'>
+<p><strong>漏洞名称:</strong> 通过查询进行 SQL 注入</p>
+<p><strong>漏洞描述:</strong> 通过直接查询构造检测潜在的 SQL 注入点</p>
+<p><strong>文件路径:</strong> E:/python/bishe/pikachu-master/vul/burteforce\bf_client.php</p>
+<p><strong>漏洞行数:</strong> 22, 23, 24, 25, 26, 11</p>
+<p><strong>漏洞代码:</strong> <code>        $sql = "select * from users where username=? and password=md5(?)";</code></p>
+</div>
+<hr>
+<div class='vulnerability'>
+<p><strong>漏洞名称:</strong> Variable Output XSS</p>
+<p><strong>漏洞描述:</strong> Detects potential XSS vulnerabilities using variable output.</p>
+<p><strong>文件路径:</strong> E:/python/bishe/pikachu-master/vul/burteforce\bf_client.php</p>
+<p><strong>漏洞行数:</strong> 22, 23, 24, 25, 26, 11</p>
+<p><strong>漏洞代码:</strong> <code>$SELF_PAGE = substr($_SERVER['PHP_SELF'],strrpos($_SERVER['PHP_SELF'],'/')+1);<sCrIpt>aler</code></p>
+</div>
+<hr>
+<div class='vulnerability'>
+<p><strong>漏洞名称:</strong> Variable Output XSS</p>
+<p><strong>漏洞描述:</strong> Detects potential XSS vulnerabilities using variable output.</p>
+<p><strong>文件路径:</strong> E:/python/bishe/pikachu-master/vul/burteforce\bf_client.php</p>
+<p><strong>漏洞行数:</strong> 22, 23, 24, 25, 26, 11</p>
+<p><strong>漏洞代码:</strong> <code>$SELF_PAGE = substr($_SERVER['PHP_SELF'],strrpos($_SERVER['PHP_SELF'],'/')+1);<sCrIpt>alert(/xss/)</ScRipt></code></p>
+</div>
+<hr>
+<div class='vulnerability'>
+<p><strong>漏洞名称:</strong> Variable Output XSS</p>
+<p><strong>漏洞描述:</strong> Detects potential XSS vulnerabilities using variable output.</p>
+<p><strong>文件路径:</strong> E:/python/bishe/pikachu-master/vul/burteforce\bf_client.php</p>
+<p><strong>漏洞行数:</strong> 22, 23, 24, 25, 26, 11</p>
+<p><strong>漏洞代码:</strong> <code>if(isset($_POST['submit'])){</code></p>
+</div>
+<hr>
+<div class='vulnerability'>
+<p><strong>漏洞名称:</strong> Variable Output XSS</p>
+<p><strong>漏洞描述:</strong> Detects potential XSS vulnerabilities using variable output.</p>
+<p><strong>文件路径:</strong> E:/python/bishe/pikachu-master/vul/burteforce\bf_client.php</p>
+<p><strong>漏洞行数:</strong> 22, 23, 24, 25, 26, 11</p>
+<p><strong>漏洞代码:</strong> <code>    if($_POST['username'] && $_POST['password']) {</code></p>
+</div>
+<hr>
+<div class='vulnerability'>
+<p><strong>漏洞名称:</strong> Variable Output XSS</p>
+<p><strong>漏洞描述:</strong> Detects potential XSS vulnerabilities using variable output.</p>
+<p><strong>文件路径:</strong> E:/python/bishe/pikachu-master/vul/burteforce\bf_client.php</p>
+<p><strong>漏洞行数:</strong> 22, 23, 24, 25, 26, 11</p>
+<p><strong>漏洞代码:</strong> <code>    if($_POST['username'] && $_POST['password']) {</code></p>
+</div>
+<hr>
+<div class='vulnerability'>
+<p><strong>漏洞名称:</strong> Variable Output XSS</p>
+<p><strong>漏洞描述:</strong> Detects potential XSS vulnerabilities using variable output.</p>
+<p><strong>文件路径:</strong> E:/python/bishe/pikachu-master/vul/burteforce\bf_client.php</p>
+<p><strong>漏洞行数:</strong> 22, 23, 24, 25, 26, 11</p>
+<p><strong>漏洞代码:</strong> <code>        $username = $_POST['username'];</code></p>
+</div>
+<hr>
+<div class='vulnerability'>
+<p><strong>漏洞名称:</strong> Variable Output XSS</p>
+<p><strong>漏洞描述:</strong> Detects potential XSS vulnerabilities using variable output.</p>
+<p><strong>文件路径:</strong> E:/python/bishe/pikachu-master/vul/burteforce\bf_client.php</p>
+<p><strong>漏洞行数:</strong> 22, 23, 24, 25, 26, 11</p>
+<p><strong>漏洞代码:</strong> <code>        $password = $_POST['password'];</code></p>
+</div>
+<hr>
+<div class='vulnerability'>
+<p><strong>漏洞名称:</strong> Form Input XSS</p>
+<p><strong>漏洞描述:</strong> Detects potential XSS vulnerabilities in form inputs.</p>
+<p><strong>文件路径:</strong> E:/python/bishe/pikachu-master/vul/burteforce\bf_client.php</p>
+<p><strong>漏洞行数:</strong> 22, 23, 24, 25, 26, 11</p>
+<p><strong>漏洞代码:</strong> <code>if(isset($_POST['submit'])){</code></p>
+</div>
+<hr>
+<div class='vulnerability'>
+<p><strong>漏洞名称:</strong> Form Input XSS</p>
+<p><strong>漏洞描述:</strong> Detects potential XSS vulnerabilities in form inputs.</p>
+<p><strong>文件路径:</strong> E:/python/bishe/pikachu-master/vul/burteforce\bf_client.php</p>
+<p><strong>漏洞行数:</strong> 22, 23, 24, 25, 26, 11</p>
+<p><strong>漏洞代码:</strong> <code>    if($_POST['username'] && $_POST['password']) {</code></p>
+</div>
+<hr>
+<div class='vulnerability'>
+<p><strong>漏洞名称:</strong> Form Input XSS</p>
+<p><strong>漏洞描述:</strong> Detects potential XSS vulnerabilities in form inputs.</p>
+<p><strong>文件路径:</strong> E:/python/bishe/pikachu-master/vul/burteforce\bf_client.php</p>
+<p><strong>漏洞行数:</strong> 22, 23, 24, 25, 26, 11</p>
+<p><strong>漏洞代码:</strong> <code>    if($_POST['username'] && $_POST['password']) {</code></p>
+</div>
+<hr>
+<div class='vulnerability'>
+<p><strong>漏洞名称:</strong> Form Input XSS</p>
+<p><strong>漏洞描述:</strong> Detects potential XSS vulnerabilities in form inputs.</p>
+<p><strong>文件路径:</strong> E:/python/bishe/pikachu-master/vul/burteforce\bf_client.php</p>
+<p><strong>漏洞行数:</strong> 22, 23, 24, 25, 26, 11</p>
+<p><strong>漏洞代码:</strong> <code>        $username = $_POST['username'];</code></p>
+</div>
+<hr>
+<div class='vulnerability'>
+<p><strong>漏洞名称:</strong> Form Input XSS</p>
+<p><strong>漏洞描述:</strong> Detects potential XSS vulnerabilities in form inputs.</p>
+<p><strong>文件路径:</strong> E:/python/bishe/pikachu-master/vul/burteforce\bf_client.php</p>
+<p><strong>漏洞行数:</strong> 22, 23, 24, 25, 26, 11</p>
+<p><strong>漏洞代码:</strong> <code>        $password = $_POST['password'];</code></p>
+</div>
+<hr>
+<div class='vulnerability'>
+<p><strong>漏洞名称:</strong> 通过查询进行 SQL 注入</p>
+<p><strong>漏洞描述:</strong> 通过直接查询构造检测潜在的 SQL 注入点</p>
+<p><strong>文件路径:</strong> E:/python/bishe/pikachu-master/vul/burteforce\bf_form.php</p>
+<p><strong>漏洞行数:</strong> 13, 25, 27, 28, 29</p>
+<p><strong>漏洞代码:</strong> <code>    $sql = "select * from users where username=? and password=md5(?)";</code></p>
+</div>
+<hr>
+<div class='vulnerability'>
+<p><strong>漏洞名称:</strong> Variable Output XSS</p>
+<p><strong>漏洞描述:</strong> Detects potential XSS vulnerabilities using variable output.</p>
+<p><strong>文件路径:</strong> E:/python/bishe/pikachu-master/vul/burteforce\bf_form.php</p>
+<p><strong>漏洞行数:</strong> 13, 25, 27, 28, 29</p>
+<p><strong>漏洞代码:</strong> <code>$SELF_PAGE = substr($_SERVER['PHP_SELF'],strrpos($_SERVER['PHP_SELF'],'/')+1);</code></p>
+</div>
+<hr>
+<div class='vulnerability'>
+<p><strong>漏洞名称:</strong> Variable Output XSS</p>
+<p><strong>漏洞描述:</strong> Detects potential XSS vulnerabilities using variable output.</p>
+<p><strong>文件路径:</strong> E:/python/bishe/pikachu-master/vul/burteforce\bf_form.php</p>
+<p><strong>漏洞行数:</strong> 13, 25, 27, 28, 29</p>
+<p><strong>漏洞代码:</strong> <code>$SELF_PAGE = substr($_SERVER['PHP_SELF'],strrpos($_SERVER['PHP_SELF'],'/')+1);</code></p>
+</div>
+<hr>
+<div class='vulnerability'>
+<p><strong>漏洞名称:</strong> Variable Output XSS</p>
+<p><strong>漏洞描述:</strong> Detects potential XSS vulnerabilities using variable output.</p>
+<p><strong>文件路径:</strong> E:/python/bishe/pikachu-master/vul/burteforce\bf_form.php</p>
+<p><strong>漏洞行数:</strong> 13, 25, 27, 28, 29</p>
+<p><strong>漏洞代码:</strong> <code>if(isset($_POST['submit']) && $_POST['username'] && $_POST['password']){</code></p>
+</div>
+<hr>
+<div class='vulnerability'>
+<p><strong>漏洞名称:</strong> Variable Output XSS</p>
+<p><strong>漏洞描述:</strong> Detects potential XSS vulnerabilities using variable output.</p>
+<p><strong>文件路径:</strong> E:/python/bishe/pikachu-master/vul/burteforce\bf_form.php</p>
+<p><strong>漏洞行数:</strong> 13, 25, 27, 28, 29</p>
+<p><strong>漏洞代码:</strong> <code>if(isset($_POST['submit']) && $_POST['username'] && $_POST['password']){</code></p>
+</div>
+<hr>
+<div class='vulnerability'>
+<p><strong>漏洞名称:</strong> Variable Output XSS</p>
+<p><strong>漏洞描述:</strong> Detects potential XSS vulnerabilities using variable output.</p>
+<p><strong>文件路径:</strong> E:/python/bishe/pikachu-master/vul/burteforce\bf_form.php</p>
+<p><strong>漏洞行数:</strong> 13, 25, 27, 28, 29</p>
+<p><strong>漏洞代码:</strong> <code>(isset($_POST['submit']) && $_POST['username'] && $_POST['password']){</code></p>
+</div>
+<hr>
+<div class='vulnerability'>
+<p><strong>漏洞名称:</strong> Variable Output XSS</p>
+<p><strong>漏洞描述:</strong> Detects potential XSS vulnerabilities using variable output.</p>
+<p><strong>文件路径:</strong> E:/python/bishe/pikachu-master/vul/burteforce\bf_form.php</p>
+<p><strong>漏洞行数:</strong> 13, 25, 27, 28, 29</p>
+<p><strong>漏洞代码:</strong> <code>    $username = $_POST['username'];</code></p>
+</div>
+<hr>
+<div class='vulnerability'>
+<p><strong>漏洞名称:</strong> Variable Output XSS</p>
+<p><strong>漏洞描述:</strong> Detects potential XSS vulnerabilities using variable output.</p>
+<p><strong>文件路径:</strong> E:/python/bishe/pikachu-master/vul/burteforce\bf_form.php</p>
+<p><strong>漏洞行数:</strong> 13, 25, 27, 28, 29</p>
+<p><strong>漏洞代码:</strong> <code>    $password = $_POST['password'];</code></p>
+</div>
+<hr>
+<div class='vulnerability'>
+<p><strong>漏洞名称:</strong> Form Input XSS</p>
+<p><strong>漏洞描述:</strong> Detects potential XSS vulnerabilities in form inputs.</p>
+<p><strong>文件路径:</strong> E:/python/bishe/pikachu-master/vul/burteforce\bf_form.php</p>
+<p><strong>漏洞行数:</strong> 13, 25, 27, 28, 29</p>
+<p><strong>漏洞代码:</strong> <code>if(isset($_POST['submit']) && $_POST['username'] && $_POST['password']){</code></p>
+</div>
+<hr>
+<div class='vulnerability'>
+<p><strong>漏洞名称:</strong> Form Input XSS</p>
+<p><strong>漏洞描述:</strong> Detects potential XSS vulnerabilities in form inputs.</p>
+<p><strong>文件路径:</strong> E:/python/bishe/pikachu-master/vul/burteforce\bf_form.php</p>
+<p><strong>漏洞行数:</strong> 13, 25, 27, 28, 29</p>
+<p><strong>漏洞代码:</strong> <code>if(isset($_POST['submit']) && $_POST['username'] && $_POST['password']){</code></p>
+</div>
+<hr>
+<div class='vulnerability'>
+<p><strong>漏洞名称:</strong> Form Input XSS</p>
+<p><strong>漏洞描述:</strong> Detects potential XSS vulnerabilities in form inputs.</p>
+<p><strong>文件路径:</strong> E:/python/bishe/pikachu-master/vul/burteforce\bf_form.php</p>
+<p><strong>漏洞行数:</strong> 13, 25, 27, 28, 29</p>
+<p><strong>漏洞代码:</strong> <code>(isset($_POST['submit']) && $_POST['username'] && $_POST['password']){</code></p>
+</div>
+<hr>
+<div class='vulnerability'>
+<p><strong>漏洞名称:</strong> Form Input XSS</p>
+<p><strong>漏洞描述:</strong> Detects potential XSS vulnerabilities in form inputs.</p>
+<p><strong>文件路径:</strong> E:/python/bishe/pikachu-master/vul/burteforce\bf_form.php</p>
+<p><strong>漏洞行数:</strong> 13, 25, 27, 28, 29</p>
+<p><strong>漏洞代码:</strong> <code>    $username = $_POST['username'];</code></p>
+</div>
+<hr>
+<div class='vulnerability'>
+<p><strong>漏洞名称:</strong> Form Input XSS</p>
+<p><strong>漏洞描述:</strong> Detects potential XSS vulnerabilities in form inputs.</p>
+<p><strong>文件路径:</strong> E:/python/bishe/pikachu-master/vul/burteforce\bf_form.php</p>
+<p><strong>漏洞行数:</strong> 13, 25, 27, 28, 29</p>
+<p><strong>漏洞代码:</strong> <code>    $password = $_POST['password'];</code></p>
+</div>
+<hr>
+<div class='vulnerability'>
+<p><strong>漏洞名称:</strong> 通过查询进行 SQL 注入</p>
+<p><strong>漏洞描述:</strong> 通过直接查询构造检测潜在的 SQL 注入点</p>
+<p><strong>文件路径:</strong> E:/python/bishe/pikachu-master/vul/burteforce\bf_server.php</p>
+<p><strong>漏洞行数:</strong> 32, 36, 38, 41, 42, 43, 12, 45, 25, 26, 29</p>
+<p><strong>漏洞代码:</strong> <code>                    $sql = "select * from users where username=? and password=md5(?)";</code></p>
+</div>
+<hr>
+<div class='vulnerability'>
+<p><strong>漏洞名称:</strong> Variable Output XSS</p>
+<p><strong>漏洞描述:</strong> Detects potential XSS vulnerabilities using variable output.</p>
+<p><strong>文件路径:</strong> E:/python/bishe/pikachu-master/vul/burteforce\bf_server.php</p>
+<p><strong>漏洞行数:</strong> 32, 36, 38, 41, 42, 43, 12, 45, 25, 26, 29</p>
+<p><strong>漏洞代码:</strong> <code>$SELF_PAGE = substr($_SERVER['PHP_SELF'],strrpos($_SERVER['PHP_SELF'],'/')+1);</code></p>
+</div>
+<hr>
+<div class='vulnerability'>
+<p><strong>漏洞名称:</strong> Variable Output XSS</p>
+<p><strong>漏洞描述:</strong> Detects potential XSS vulnerabilities using variable output.</p>
+<p><strong>文件路径:</strong> E:/python/bishe/pikachu-master/vul/burteforce\bf_server.php</p>
+<p><strong>漏洞行数:</strong> 32, 36, 38, 41, 42, 43, 12, 45, 25, 26, 29</p>
+<p><strong>漏洞代码:</strong> <code>$SELF_PAGE = substr($_SERVER['PHP_SELF'],strrpos($_SERVER['PHP_SELF'],'/')+1);</code></p>
+</div>
+<hr>
+<div class='vulnerability'>
+<p><strong>漏洞名称:</strong> Variable Output XSS</p>
+<p><strong>漏洞描述:</strong> Detects potential XSS vulnerabilities using variable output.</p>
+<p><strong>文件路径:</strong> E:/python/bishe/pikachu-master/vul/burteforce\bf_server.php</p>
+<p><strong>漏洞行数:</strong> 32, 36, 38, 41, 42, 43, 12, 45, 25, 26, 29</p>
+<p><strong>漏洞代码:</strong> <code>if(isset($_POST['submit'])) {</code></p>
+</div>
+<hr>
+<div class='vulnerability'>
+<p><strong>漏洞名称:</strong> Variable Output XSS</p>
+<p><strong>漏洞描述:</strong> Detects potential XSS vulnerabilities using variable output.</p>
+<p><strong>文件路径:</strong> E:/python/bishe/pikachu-master/vul/burteforce\bf_server.php</p>
+<p><strong>漏洞行数:</strong> 32, 36, 38, 41, 42, 43, 12, 45, 25, 26, 29</p>
+<p><strong>漏洞代码:</strong> <code>    if (empty($_POST['username'])) {</code></p>
+</div>
+<hr>
+<div class='vulnerability'>
+<p><strong>漏洞名称:</strong> Variable Output XSS</p>
+<p><strong>漏洞描述:</strong> Detects potential XSS vulnerabilities using variable output.</p>
+<p><strong>文件路径:</strong> E:/python/bishe/pikachu-master/vul/burteforce\bf_server.php</p>
+<p><strong>漏洞行数:</strong> 32, 36, 38, 41, 42, 43, 12, 45, 25, 26, 29</p>
+<p><strong>漏洞代码:</strong> <code>        if (empty($_POST['password'])) {</code></p>
+</div>
+<hr>
+<div class='vulnerability'>
+<p><strong>漏洞名称:</strong> Variable Output XSS</p>
+<p><strong>漏洞描述:</strong> Detects potential XSS vulnerabilities using variable output.</p>
+<p><strong>文件路径:</strong> E:/python/bishe/pikachu-master/vul/burteforce\bf_server.php</p>
+<p><strong>漏洞行数:</strong> 32, 36, 38, 41, 42, 43, 12, 45, 25, 26, 29</p>
+<p><strong>漏洞代码:</strong> <code>            if (empty($_POST['vcode'])) {</code></p>
+</div>
+<hr>
+<div class='vulnerability'>
+<p><strong>漏洞名称:</strong> Variable Output XSS</p>
+<p><strong>漏洞描述:</strong> Detects potential XSS vulnerabilities using variable output.</p>
+<p><strong>文件路径:</strong> E:/python/bishe/pikachu-master/vul/burteforce\bf_server.php</p>
+<p><strong>漏洞行数:</strong> 32, 36, 38, 41, 42, 43, 12, 45, 25, 26, 29</p>
+<p><strong>漏洞代码:</strong> <code>                if (strtolower($_POST['vcode']) != strtolower($_SESSION['vcode'])) {</code></p>
+</div>
+<hr>
+<div class='vulnerability'>
+<p><strong>漏洞名称:</strong> Variable Output XSS</p>
+<p><strong>漏洞描述:</strong> Detects potential XSS vulnerabilities using variable output.</p>
+<p><strong>文件路径:</strong> E:/python/bishe/pikachu-master/vul/burteforce\bf_server.php</p>
+<p><strong>漏洞行数:</strong> 32, 36, 38, 41, 42, 43, 12, 45, 25, 26, 29</p>
+<p><strong>漏洞代码:</strong> <code>    if (strtolower($_POST['vcode']) != strtolower($_SESSION['vcode'])) {</code></p>
+</div>
+<hr>
+<div class='vulnerability'>
+<p><strong>漏洞名称:</strong> Variable Output XSS</p>
+<p><strong>漏洞描述:</strong> Detects potential XSS vulnerabilities using variable output.</p>
+<p><strong>文件路径:</strong> E:/python/bishe/pikachu-master/vul/burteforce\bf_server.php</p>
+<p><strong>漏洞行数:</strong> 32, 36, 38, 41, 42, 43, 12, 45, 25, 26, 29</p>
+<p><strong>漏洞代码:</strong> <code>                    //应该在验证完成后,销毁该$_SESSION['vcode']</code></p>
+</div>
+<hr>
+<div class='vulnerability'>
+<p><strong>漏洞名称:</strong> Variable Output XSS</p>
+<p><strong>漏洞描述:</strong> Detects potential XSS vulnerabilities using variable output.</p>
+<p><strong>文件路径:</strong> E:/python/bishe/pikachu-master/vul/burteforce\bf_server.php</p>
+<p><strong>漏洞行数:</strong> 32, 36, 38, 41, 42, 43, 12, 45, 25, 26, 29</p>
+<p><strong>漏洞代码:</strong> <code>                    $username = $_POST['username'];</code></p>
+</div>
+<hr>
+<div class='vulnerability'>
+<p><strong>漏洞名称:</strong> Variable Output XSS</p>
+<p><strong>漏洞描述:</strong> Detects potential XSS vulnerabilities using variable output.</p>
+<p><strong>文件路径:</strong> E:/python/bishe/pikachu-master/vul/burteforce\bf_server.php</p>
+<p><strong>漏洞行数:</strong> 32, 36, 38, 41, 42, 43, 12, 45, 25, 26, 29</p>
+<p><strong>漏洞代码:</strong> <code>                    $password = $_POST['password'];</code></p>
+</div>
+<hr>
+<div class='vulnerability'>
+<p><strong>漏洞名称:</strong> Variable Output XSS</p>
+<p><strong>漏洞描述:</strong> Detects potential XSS vulnerabilities using variable output.</p>
+<p><strong>文件路径:</strong> E:/python/bishe/pikachu-master/vul/burteforce\bf_server.php</p>
+<p><strong>漏洞行数:</strong> 32, 36, 38, 41, 42, 43, 12, 45, 25, 26, 29</p>
+<p><strong>漏洞代码:</strong> <code>                    $vcode = $_POST['vcode'];</code></p>
+</div>
+<hr>
+<div class='vulnerability'>
+<p><strong>漏洞名称:</strong> Form Input XSS</p>
+<p><strong>漏洞描述:</strong> Detects potential XSS vulnerabilities in form inputs.</p>
+<p><strong>文件路径:</strong> E:/python/bishe/pikachu-master/vul/burteforce\bf_server.php</p>
+<p><strong>漏洞行数:</strong> 32, 36, 38, 41, 42, 43, 12, 45, 25, 26, 29</p>
+<p><strong>漏洞代码:</strong> <code>if(isset($_POST['submit'])) {</code></p>
+</div>
+<hr>
+<div class='vulnerability'>
+<p><strong>漏洞名称:</strong> Form Input XSS</p>
+<p><strong>漏洞描述:</strong> Detects potential XSS vulnerabilities in form inputs.</p>
+<p><strong>文件路径:</strong> E:/python/bishe/pikachu-master/vul/burteforce\bf_server.php</p>
+<p><strong>漏洞行数:</strong> 32, 36, 38, 41, 42, 43, 12, 45, 25, 26, 29</p>
+<p><strong>漏洞代码:</strong> <code>    if (empty($_POST['username'])) {</code></p>
+</div>
+<hr>
+<div class='vulnerability'>
+<p><strong>漏洞名称:</strong> Form Input XSS</p>
+<p><strong>漏洞描述:</strong> Detects potential XSS vulnerabilities in form inputs.</p>
+<p><strong>文件路径:</strong> E:/python/bishe/pikachu-master/vul/burteforce\bf_server.php</p>
+<p><strong>漏洞行数:</strong> 32, 36, 38, 41, 42, 43, 12, 45, 25, 26, 29</p>
+<p><strong>漏洞代码:</strong> <code>        if (empty($_POST['password'])) {</code></p>
+</div>
+<hr>
+<div class='vulnerability'>
+<p><strong>漏洞名称:</strong> Form Input XSS</p>
+<p><strong>漏洞描述:</strong> Detects potential XSS vulnerabilities in form inputs.</p>
+<p><strong>文件路径:</strong> E:/python/bishe/pikachu-master/vul/burteforce\bf_server.php</p>
+<p><strong>漏洞行数:</strong> 32, 36, 38, 41, 42, 43, 12, 45, 25, 26, 29</p>
+<p><strong>漏洞代码:</strong> <code>            if (empty($_POST['vcode'])) {</code></p>
+</div>
+<hr>
+<div class='vulnerability'>
+<p><strong>漏洞名称:</strong> Form Input XSS</p>
+<p><strong>漏洞描述:</strong> Detects potential XSS vulnerabilities in form inputs.</p>
+<p><strong>文件路径:</strong> E:/python/bishe/pikachu-master/vul/burteforce\bf_server.php</p>
+<p><strong>漏洞行数:</strong> 32, 36, 38, 41, 42, 43, 12, 45, 25, 26, 29</p>
+<p><strong>漏洞代码:</strong> <code>                if (strtolower($_POST['vcode']) != strtolower($_SESSION['vcode'])) {</code></p>
+</div>
+<hr>
+<div class='vulnerability'>
+<p><strong>漏洞名称:</strong> Form Input XSS</p>
+<p><strong>漏洞描述:</strong> Detects potential XSS vulnerabilities in form inputs.</p>
+<p><strong>文件路径:</strong> E:/python/bishe/pikachu-master/vul/burteforce\bf_server.php</p>
+<p><strong>漏洞行数:</strong> 32, 36, 38, 41, 42, 43, 12, 45, 25, 26, 29</p>
+<p><strong>漏洞代码:</strong> <code>                    $username = $_POST['username'];</code></p>
+</div>
+<hr>
+<div class='vulnerability'>
+<p><strong>漏洞名称:</strong> Form Input XSS</p>
+<p><strong>漏洞描述:</strong> Detects potential XSS vulnerabilities in form inputs.</p>
+<p><strong>文件路径:</strong> E:/python/bishe/pikachu-master/vul/burteforce\bf_server.php</p>
+<p><strong>漏洞行数:</strong> 32, 36, 38, 41, 42, 43, 12, 45, 25, 26, 29</p>
+<p><strong>漏洞代码:</strong> <code>                    $password = $_POST['password'];</code></p>
+</div>
+<hr>
+<div class='vulnerability'>
+<p><strong>漏洞名称:</strong> Form Input XSS</p>
+<p><strong>漏洞描述:</strong> Detects potential XSS vulnerabilities in form inputs.</p>
+<p><strong>文件路径:</strong> E:/python/bishe/pikachu-master/vul/burteforce\bf_server.php</p>
+<p><strong>漏洞行数:</strong> 32, 36, 38, 41, 42, 43, 12, 45, 25, 26, 29</p>
+<p><strong>漏洞代码:</strong> <code>                    $vcode = $_POST['vcode'];</code></p>
+</div>
+<hr>
+<div class='vulnerability'>
+<p><strong>漏洞名称:</strong> 通过查询进行 SQL 注入</p>
+<p><strong>漏洞描述:</strong> 通过直接查询构造检测潜在的 SQL 注入点</p>
+<p><strong>文件路径:</strong> E:/python/bishe/pikachu-master/vul/burteforce\bf_token.php</p>
+<p><strong>漏洞行数:</strong> 36, 12, 115, 24, 26, 27, 28, 30</p>
+<p><strong>漏洞代码:</strong> <code>    $sql = "select * from users where username=? and password=md5(?)";</code></p>
+</div>
+<hr>
+<div class='vulnerability'>
+<p><strong>漏洞名称:</strong> Variable Output XSS</p>
+<p><strong>漏洞描述:</strong> Detects potential XSS vulnerabilities using variable output.</p>
+<p><strong>文件路径:</strong> E:/python/bishe/pikachu-master/vul/burteforce\bf_token.php</p>
+<p><strong>漏洞行数:</strong> 36, 12, 115, 24, 26, 27, 28, 30</p>
+<p><strong>漏洞代码:</strong> <code>$SELF_PAGE = substr($_SERVER['PHP_SELF'],strrpos($_SERVER['PHP_SELF'],'/')+1);</code></p>
+</div>
+<hr>
+<div class='vulnerability'>
+<p><strong>漏洞名称:</strong> Variable Output XSS</p>
+<p><strong>漏洞描述:</strong> Detects potential XSS vulnerabilities using variable output.</p>
+<p><strong>文件路径:</strong> E:/python/bishe/pikachu-master/vul/burteforce\bf_token.php</p>
+<p><strong>漏洞行数:</strong> 36, 12, 115, 24, 26, 27, 28, 30</p>
+<p><strong>漏洞代码:</strong> <code>$SELF_PAGE = substr($_SERVER['PHP_SELF'],strrpos($_SERVER['PHP_SELF'],'/')+1);</code></p>
+</div>
+<hr>
+<div class='vulnerability'>
+<p><strong>漏洞名称:</strong> Variable Output XSS</p>
+<p><strong>漏洞描述:</strong> Detects potential XSS vulnerabilities using variable output.</p>
+<p><strong>文件路径:</strong> E:/python/bishe/pikachu-master/vul/burteforce\bf_token.php</p>
+<p><strong>漏洞行数:</strong> 36, 12, 115, 24, 26, 27, 28, 30</p>
+<p><strong>漏洞代码:</strong> <code>if(isset($_POST['submit']) && $_POST['username'] && $_POST['password'] && $</code></p>
+</div>
+<hr>
+<div class='vulnerability'>
+<p><strong>漏洞名称:</strong> Variable Output XSS</p>
+<p><strong>漏洞描述:</strong> Detects potential XSS vulnerabilities using variable output.</p>
+<p><strong>文件路径:</strong> E:/python/bishe/pikachu-master/vul/burteforce\bf_token.php</p>
+<p><strong>漏洞行数:</strong> 36, 12, 115, 24, 26, 27, 28, 30</p>
+<p><strong>漏洞代码:</strong> <code>if(isset($_POST['submit']) && $_POST['username'] && $_POST['password'] && $_POST['token']){</code></p>
+</div>
+<hr>
+<div class='vulnerability'>
+<p><strong>漏洞名称:</strong> Variable Output XSS</p>
+<p><strong>漏洞描述:</strong> Detects potential XSS vulnerabilities using variable output.</p>
+<p><strong>文件路径:</strong> E:/python/bishe/pikachu-master/vul/burteforce\bf_token.php</p>
+<p><strong>漏洞行数:</strong> 36, 12, 115, 24, 26, 27, 28, 30</p>
+<p><strong>漏洞代码:</strong> <code>(isset($_POST['submit']) && $_POST['username'] && $_POST['password'] && $_POST['token']){</code></p>
+</div>
+<hr>
+<div class='vulnerability'>
+<p><strong>漏洞名称:</strong> Variable Output XSS</p>
+<p><strong>漏洞描述:</strong> Detects potential XSS vulnerabilities using variable output.</p>
+<p><strong>文件路径:</strong> E:/python/bishe/pikachu-master/vul/burteforce\bf_token.php</p>
+<p><strong>漏洞行数:</strong> 36, 12, 115, 24, 26, 27, 28, 30</p>
+<p><strong>漏洞代码:</strong> <code>]) && $_POST['username'] && $_POST['password'] && $_POST['token']){</code></p>
+</div>
+<hr>
+<div class='vulnerability'>
+<p><strong>漏洞名称:</strong> Variable Output XSS</p>
+<p><strong>漏洞描述:</strong> Detects potential XSS vulnerabilities using variable output.</p>
+<p><strong>文件路径:</strong> E:/python/bishe/pikachu-master/vul/burteforce\bf_token.php</p>
+<p><strong>漏洞行数:</strong> 36, 12, 115, 24, 26, 27, 28, 30</p>
+<p><strong>漏洞代码:</strong> <code>    $username = $_POST['username'];</code></p>
+</div>
+<hr>
+<div class='vulnerability'>
+<p><strong>漏洞名称:</strong> Variable Output XSS</p>
+<p><strong>漏洞描述:</strong> Detects potential XSS vulnerabilities using variable output.</p>
+<p><strong>文件路径:</strong> E:/python/bishe/pikachu-master/vul/burteforce\bf_token.php</p>
+<p><strong>漏洞行数:</strong> 36, 12, 115, 24, 26, 27, 28, 30</p>
+<p><strong>漏洞代码:</strong> <code>    $password = $_POST['password'];</code></p>
+</div>
+<hr>
+<div class='vulnerability'>
+<p><strong>漏洞名称:</strong> Variable Output XSS</p>
+<p><strong>漏洞描述:</strong> Detects potential XSS vulnerabilities using variable output.</p>
+<p><strong>文件路径:</strong> E:/python/bishe/pikachu-master/vul/burteforce\bf_token.php</p>
+<p><strong>漏洞行数:</strong> 36, 12, 115, 24, 26, 27, 28, 30</p>
+<p><strong>漏洞代码:</strong> <code>    $token = $_POST['token'];</code></p>
+</div>
+<hr>
+<div class='vulnerability'>
+<p><strong>漏洞名称:</strong> Variable Output XSS</p>
+<p><strong>漏洞描述:</strong> Detects potential XSS vulnerabilities using variable output.</p>
+<p><strong>文件路径:</strong> E:/python/bishe/pikachu-master/vul/burteforce\bf_token.php</p>
+<p><strong>漏洞行数:</strong> 36, 12, 115, 24, 26, 27, 28, 30</p>
+<p><strong>漏洞代码:</strong> <code>    if($token == $_SESSION['token']){</code></p>
+</div>
+<hr>
+<div class='vulnerability'>
+<p><strong>漏洞名称:</strong> Variable Output XSS</p>
+<p><strong>漏洞描述:</strong> Detects potential XSS vulnerabilities using variable output.</p>
+<p><strong>文件路径:</strong> E:/python/bishe/pikachu-master/vul/burteforce\bf_token.php</p>
+<p><strong>漏洞行数:</strong> 36, 12, 115, 24, 26, 27, 28, 30</p>
+<p><strong>漏洞代码:</strong> <code>nput type="hidden" name="token" value="<?php echo $_SESSION['token'];?>" /></code></p>
+</div>
+<hr>
+<div class='vulnerability'>
+<p><strong>漏洞名称:</strong> Form Input XSS</p>
+<p><strong>漏洞描述:</strong> Detects potential XSS vulnerabilities in form inputs.</p>
+<p><strong>文件路径:</strong> E:/python/bishe/pikachu-master/vul/burteforce\bf_token.php</p>
+<p><strong>漏洞行数:</strong> 36, 12, 115, 24, 26, 27, 28, 30</p>
+<p><strong>漏洞代码:</strong> <code>if(isset($_POST['submit']) && $_POST['username'] && $_POST['password'] && $</code></p>
+</div>
+<hr>
+<div class='vulnerability'>
+<p><strong>漏洞名称:</strong> Form Input XSS</p>
+<p><strong>漏洞描述:</strong> Detects potential XSS vulnerabilities in form inputs.</p>
+<p><strong>文件路径:</strong> E:/python/bishe/pikachu-master/vul/burteforce\bf_token.php</p>
+<p><strong>漏洞行数:</strong> 36, 12, 115, 24, 26, 27, 28, 30</p>
+<p><strong>漏洞代码:</strong> <code>if(isset($_POST['submit']) && $_POST['username'] && $_POST['password'] && $_POST['token']){</code></p>
+</div>
+<hr>
+<div class='vulnerability'>
+<p><strong>漏洞名称:</strong> Form Input XSS</p>
+<p><strong>漏洞描述:</strong> Detects potential XSS vulnerabilities in form inputs.</p>
+<p><strong>文件路径:</strong> E:/python/bishe/pikachu-master/vul/burteforce\bf_token.php</p>
+<p><strong>漏洞行数:</strong> 36, 12, 115, 24, 26, 27, 28, 30</p>
+<p><strong>漏洞代码:</strong> <code>(isset($_POST['submit']) && $_POST['username'] && $_POST['password'] && $_POST['token']){</code></p>
+</div>
+<hr>
+<div class='vulnerability'>
+<p><strong>漏洞名称:</strong> Form Input XSS</p>
+<p><strong>漏洞描述:</strong> Detects potential XSS vulnerabilities in form inputs.</p>
+<p><strong>文件路径:</strong> E:/python/bishe/pikachu-master/vul/burteforce\bf_token.php</p>
+<p><strong>漏洞行数:</strong> 36, 12, 115, 24, 26, 27, 28, 30</p>
+<p><strong>漏洞代码:</strong> <code>]) && $_POST['username'] && $_POST['password'] && $_POST['token']){</code></p>
+</div>
+<hr>
+<div class='vulnerability'>
+<p><strong>漏洞名称:</strong> Form Input XSS</p>
+<p><strong>漏洞描述:</strong> Detects potential XSS vulnerabilities in form inputs.</p>
+<p><strong>文件路径:</strong> E:/python/bishe/pikachu-master/vul/burteforce\bf_token.php</p>
+<p><strong>漏洞行数:</strong> 36, 12, 115, 24, 26, 27, 28, 30</p>
+<p><strong>漏洞代码:</strong> <code>    $username = $_POST['username'];</code></p>
+</div>
+<hr>
+<div class='vulnerability'>
+<p><strong>漏洞名称:</strong> Form Input XSS</p>
+<p><strong>漏洞描述:</strong> Detects potential XSS vulnerabilities in form inputs.</p>
+<p><strong>文件路径:</strong> E:/python/bishe/pikachu-master/vul/burteforce\bf_token.php</p>
+<p><strong>漏洞行数:</strong> 36, 12, 115, 24, 26, 27, 28, 30</p>
+<p><strong>漏洞代码:</strong> <code>    $password = $_POST['password'];</code></p>
+</div>
+<hr>
+<div class='vulnerability'>
+<p><strong>漏洞名称:</strong> Form Input XSS</p>
+<p><strong>漏洞描述:</strong> Detects potential XSS vulnerabilities in form inputs.</p>
+<p><strong>文件路径:</strong> E:/python/bishe/pikachu-master/vul/burteforce\bf_token.php</p>
+<p><strong>漏洞行数:</strong> 36, 12, 115, 24, 26, 27, 28, 30</p>
+<p><strong>漏洞代码:</strong> <code>    $token = $_POST['token'];</code></p>
+</div>
+<hr>
+<div class='vulnerability'>
+<p><strong>漏洞名称:</strong> Variable Output XSS</p>
+<p><strong>漏洞描述:</strong> Detects potential XSS vulnerabilities using variable output.</p>
+<p><strong>文件路径:</strong> E:/python/bishe/pikachu-master/vul/burteforce\burteforce.php</p>
+<p><strong>漏洞行数:</strong> 8</p>
+<p><strong>漏洞代码:</strong> <code>$SELF_PAGE = substr($_SERVER['PHP_SELF'],strrpos($_SERVER['PHP_SELF'],'/')+1);</code></p>
+</div>
+<hr>
+<div class='vulnerability'>
+<p><strong>漏洞名称:</strong> Variable Output XSS</p>
+<p><strong>漏洞描述:</strong> Detects potential XSS vulnerabilities using variable output.</p>
+<p><strong>文件路径:</strong> E:/python/bishe/pikachu-master/vul/burteforce\burteforce.php</p>
+<p><strong>漏洞行数:</strong> 8</p>
+<p><strong>漏洞代码:</strong> <code>$SELF_PAGE = substr($_SERVER['PHP_SELF'],strrpos($_SERVER['PHP_SELF'],'/')+1);</code></p>
+</div>
+</body>
+</html>

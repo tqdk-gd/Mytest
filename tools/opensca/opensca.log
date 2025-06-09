@@ -1,0 +1,33 @@
+[INFO] 2025/03/07 10:40:27 main.go:140: opensca-cli version: v3.0.6
+[INFO] 2025/03/07 10:40:27 main.go:141: use config: E:\shentou\opensca\config.json
+[DEBUG] 2025/03/07 10:40:27 walk.go:33: walk 
+[ERROR] 2025/03/07 10:40:27 walk.go:48: Stat : The system cannot find the path specified.
+[ERROR] 2025/03/07 10:40:27 walk.go:48: goroutine 1 [running]:
+runtime/debug.Stack()
+	/usr/local/go/src/runtime/debug/stack.go:26 +0x5e
+github.com/xmirrorsecurity/opensca-cli/v3/opensca/logs.Error({0xc00009e3f0?, 0x0?, 0x7?})
+	/github/workspace/opensca/logs/log.go:170 +0x3b
+github.com/xmirrorsecurity/opensca-cli/v3/opensca/walk.Walk({0x10b6e90, 0x189ce80}, {0x10aab80, 0x1}, {0x0?, 0x0?}, 0xc00009e3c0, 0xc00008b140)
+	/github/workspace/opensca/walk/walk.go:48 +0x1de
+github.com/xmirrorsecurity/opensca-cli/v3/opensca.RunTask({0x10b6e90, 0x189ce80}, 0xc0000a6460)
+	/github/workspace/opensca/run.go:83 +0x38e
+main.main()
+	/github/workspace/main.go:64 +0x19f
+[ERROR] 2025/03/07 10:40:27 main.go:68: Stat : The system cannot find the path specified.
+[ERROR] 2025/03/07 10:40:27 main.go:68: goroutine 1 [running]:
+runtime/debug.Stack()
+	/usr/local/go/src/runtime/debug/stack.go:26 +0x5e
+github.com/xmirrorsecurity/opensca-cli/v3/opensca/logs.Error({0xc00009e440?, 0x0?, 0x0?})
+	/github/workspace/opensca/logs/log.go:170 +0x3b
+main.main()
+	/github/workspace/main.go:68 +0x228
+[INFO] 2025/03/07 10:40:27 main.go:222: prepare report
+[INFO] 2025/03/07 10:40:27 origin.go:76: load 0 vulnerability
+[INFO] 2025/03/07 10:40:27 detail.go:273: calculate indirect vuln
+[WARN] 2025/03/07 10:40:27 main.go:259: database origin error: not config vuln database origin
+[INFO] 2025/03/07 10:40:27 save.go:38: result save to output.json
+[INFO] 2025/03/07 10:40:27 save.go:38: result save to output.html
+[INFO] 2025/03/07 10:40:27 main.go:92: 
+Complete!
+Components:0 C:0 H:0 M:0 L:0
+Vulnerabilities:0 C:0 H:0 M:0 L:0
